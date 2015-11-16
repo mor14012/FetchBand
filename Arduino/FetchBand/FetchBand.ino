@@ -21,7 +21,7 @@ void setup() {
 void loop() {
   if (Bluetooth.available()){
     Data = Bluetooth.read();
-    if(Data=='0'){
+    if(Data=='4'){
       alarmLed = false;
       alarmBuzzer = false;
       state = false;
