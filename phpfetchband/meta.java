@@ -1,0 +1,61 @@
+/** 
+ * Reflejo de la tabla 'meta' en la base de datos
+ */
+public class Meta {
+
+    /*
+    Atributos
+     */
+    private String idMeta;
+    private String Name;
+    private String Altitude;
+    private String Longitude;
+    private String Latitude;
+
+
+    public Meta(String idMeta, String Name, String Altitude, String Longitude, String Latitude) {
+        this.idMeta = idMeta;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.prioridad = prioridad;
+        this.fechaLim = fechaLim;
+        this.categoria = categoria;
+    }
+
+    public String getIdMeta() {
+        return idMeta;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String getPrioridad() {
+        return prioridad;
+    }
+
+    public String getFechaLim() {
+        return fechaLim;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    /**
+     * Compara los atributos de dos metas
+     * @param meta Meta externa
+     * @return true si son iguales, false si hay cambios
+     */
+    public boolean compararCon(Meta meta) {
+        return this.titulo.compareTo(meta.titulo) == 0 &&
+                this.descripcion.compareTo(meta.descripcion) == 0 &&
+                this.fechaLim.compareTo(meta.fechaLim) == 0 &&
+                this.categoria.compareTo(meta.categoria) == 0 &&
+                this.prioridad.compareTo(meta.prioridad) == 0;
+    }
+}
